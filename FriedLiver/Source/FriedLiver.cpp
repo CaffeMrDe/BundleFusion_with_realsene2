@@ -24,7 +24,7 @@ RGBDSensor* getRGBDSensor()
 #ifdef OPEN_NI
 		//static PrimeSenseSensor s_primeSense;
 		//return &s_primeSense;
-		g_sensor = new PrimeSenseSensor;
+		//g_sensor = new PrimeSenseSensor;
 		return g_sensor;
 #else 
 		throw MLIB_EXCEPTION("Requires OpenNI 2 SDK and enable OPEN_NI macro");
