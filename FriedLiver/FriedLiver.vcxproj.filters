@@ -149,7 +149,10 @@
     <ClCompile Include="Source\KinectOneSensor.cpp">
       <Filter>Sensors</Filter>
     </ClCompile>
-    <ClCompile Include="RealSense2.cpp">
+    <ClCompile Include="Source\RealSense2.cpp">
+      <Filter>Sensors</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\RealSense2OpenNi2.cpp">
       <Filter>Sensors</Filter>
     </ClCompile>
   </ItemGroup>
@@ -402,7 +405,11 @@
     <ClInclude Include="Source\KinectOneSensor.h">
       <Filter>Sensors</Filter>
     </ClInclude>
-    <ClInclude Include="RealSense2.h">
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Source\RealSense2.h">
+      <Filter>Sensors</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\RealSense2OpenNi2.h">
       <Filter>Sensors</Filter>
     </ClInclude>
   </ItemGroup>
@@ -493,5 +500,8 @@
     <FxCompile Include="Shaders\PhongLighting.hlsl">
       <Filter>DepthSensing\Shader</Filter>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FriedLiver.rc" />
   </ItemGroup>
 </Project>

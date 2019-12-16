@@ -44,7 +44,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <ExecutablePath>$(WindowsSDK_ExecutablePath_x86);$(WindowsSDK_ExecutablePath_x64);$(ExecutablePath)</ExecutablePath>
-    <IncludePath>$(IncludePath);$(WindowsSDK_IncludePath);$(KINECTSDK10_DIR)\inc;$(KINECTSDK20_DIR)\inc;$(OPENNI2_INCLUDE64);$(DXSDK_DIR)Include;./Source/;./Source/SiftGPU/;./Include;./Include/Intel;./Include/cutil/inc;./Include/Uplink;../external/mlib/include;../../mlibExternal/include;D:/3DRe/Eigen/eigen3</IncludePath>
+    <IncludePath>C:\Program Files (x86)\Intel RealSense SDK 2.0 (Win7)\include;$(IncludePath);$(WindowsSDK_IncludePath);$(KINECTSDK10_DIR)\inc;$(KINECTSDK20_DIR)\inc;$(OPENNI2_INCLUDE64);$(DXSDK_DIR)Include;./Source/;./Source/SiftGPU/;./Include;./Include/Intel;./Include/cutil/inc;./Include/Uplink;../external/mlib/include;../../mlibExternal/include;D:/3DRe/Eigen/eigen3</IncludePath>
     <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x64;$(KINECTSDK10_DIR)\lib\amd64;$(CUDA_LIB_PATH);$(KINECTSDK20_DIR)\lib\x64;$(OPENNI2_LIB64);Libs;../../mlibExternal/libsWindows/lib64</LibraryPath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
   </PropertyGroup>
@@ -75,7 +75,7 @@
       <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;d3dx11d.lib;d3dx9d.lib;dxerr.lib;dxguid.lib;winmm.lib;comctl32.lib;Shlwapi.lib;cudart.lib;cublas.lib;FreeImage.lib;zlib64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>../opencv/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Intel RealSense SDK 2.0 (Win7)\lib\x64;../opencv/lib/;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <Manifest>
       <EnableDPIAwareness>true</EnableDPIAwareness>
@@ -135,7 +135,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RealSense2.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Source\BinaryDumpReader.h" />
     <ClInclude Include="Source\Bundler.h" />
     <ClInclude Include="Source\ConditionManager.h" />
@@ -197,6 +197,8 @@
     <ClInclude Include="Source\OnlineBundlerHelper.h" />
     <ClInclude Include="Source\PoseHelper.h" />
     <ClInclude Include="Source\PrimeSenseSensor.h" />
+    <ClInclude Include="Source\RealSense2.h" />
+    <ClInclude Include="Source\RealSense2OpenNi2.h" />
     <ClInclude Include="Source\RGBDSensor.h" />
     <ClInclude Include="Source\SBA.h" />
     <ClInclude Include="Source\SensorDataReader.h" />
@@ -234,7 +236,6 @@
     <ClInclude Include="Source\TrajectoryManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="RealSense2.cpp" />
     <ClCompile Include="Source\BinaryDumpReader.cpp" />
     <ClCompile Include="Source\Bundler.cpp" />
     <ClCompile Include="Source\ConditionManager.cpp" />
@@ -309,6 +310,8 @@
     </ClCompile>
     <ClCompile Include="Source\OnlineBundler.cpp" />
     <ClCompile Include="Source\PrimeSenseSensor.cpp" />
+    <ClCompile Include="Source\RealSense2.cpp" />
+    <ClCompile Include="Source\RealSense2OpenNi2.cpp" />
     <ClCompile Include="Source\RGBDSensor.cpp" />
     <ClCompile Include="Source\SBA.cpp" />
     <ClCompile Include="Source\SensorDataReader.cpp" />
@@ -371,6 +374,9 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="FriedLiver.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
