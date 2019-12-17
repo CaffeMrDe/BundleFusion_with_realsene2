@@ -104,6 +104,7 @@ struct BundlerState {
 		m_processState = DO_NOTHING;
 
 		m_bUseSolve = true;
+		//m_bUseSolve = false;
 		m_totalNumOptLocalFrames = 0;
 	}
 };

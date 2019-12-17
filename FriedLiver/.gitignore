@@ -5,3 +5,5 @@ ipch
 *.user
 *.sdf
 *.opensdf
+CompiledShaders
+*.zip

@@ -1767,6 +1767,7 @@ HRESULT WINAPI DXUTMainLoop( HACCEL hAccel )
     }
 
     // Now we're ready to receive and process Windows messages.
+	//主循环的逻辑是先进行一直循环render 图像，通过回调函数调用相机的图像，然后进行3D重建
     bool bGotMsg;
     MSG msg;
     msg.message = WM_NULL;
@@ -1790,6 +1791,7 @@ HRESULT WINAPI DXUTMainLoop( HACCEL hAccel )
         else
         {
             // Render a frame during idle time (no messages are waiting)
+			//printf("DXUTRender3DEnvironment \n");
             DXUTRender3DEnvironment();
         }
     }

@@ -51,9 +51,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <ExecutablePath>$(DXSDK_DIR)Utilities\bin\x64;$(DXSDK_DIR)Utilities\bin\x86;$(ExecutablePath)</ExecutablePath>
-    <IncludePath>$(IncludePath);$(WindowsSDK_IncludePath);$(KINECTSDK10_DIR)\inc;$(KINECTSDK20_DIR)\inc;$(OPENNI2_INCLUDE64);$(DXSDK_DIR)Include;./Source/;./Source/SiftGPU/;./Include;./Include/Intel;./Include/cutil/inc;./Include/Uplink;../external/mlib/include;../../mlibExternal/include</IncludePath>
+    <IncludePath>D:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;C:\Program Files (x86)\Intel RealSense SDK 2.0 (Win7)\include;$(IncludePath);$(WindowsSDK_IncludePath);$(KINECTSDK10_DIR)\inc;$(KINECTSDK20_DIR)\inc;$(OPENNI2_INCLUDE64);$(DXSDK_DIR)Include;./Source/;./Source/SiftGPU/;./Include;./Include/Intel;./Include/cutil/inc;./Include/Uplink;../external/mlib/include;../../mlibExternal/include</IncludePath>
     <LibraryPath>$(LibraryPath);$(DXSDK_DIR)Lib\x64;$(KINECTSDK10_DIR)\lib\amd64;$(CUDA_LIB_PATH);$(KINECTSDK20_DIR)\lib\x64;$(OPENNI2_LIB64);Libs;../../mlibExternal/libsWindows/lib64</LibraryPath>
     <SourcePath>$(VC_SourcePath);</SourcePath>
+    <LibraryWPath>$(WindowsSDK_MetadataPath);D:\3DRe\mLibExternal\libsWindows\dll64;</LibraryWPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -104,6 +105,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <DisableSpecificWarnings>4819</DisableSpecificWarnings>
       <AdditionalOptions>/Zm113 %(AdditionalOptions)</AdditionalOptions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <AdditionalDependencies>d3d11.lib;d3dcompiler.lib;d3dx11.lib;d3dx9.lib;dxerr.lib;dxguid.lib;winmm.lib;comctl32.lib;Shlwapi.lib;cudart.lib;cublas.lib;FreeImage.lib;zlib64.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -119,7 +121,7 @@
     <CudaCompile>
       <TargetMachinePlatform>64</TargetMachinePlatform>
       <Include>Include\cutil\inc;$(SolutionDir)</Include>
-      <CodeGeneration>compute_35,sm_35</CodeGeneration>
+      <CodeGeneration>compute_61,sm_61</CodeGeneration>
       <MaxRegCount>62</MaxRegCount>
       <FastMath>true</FastMath>
       <Optimization>O3</Optimization>
