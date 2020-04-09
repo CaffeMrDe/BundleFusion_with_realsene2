@@ -1,6 +1,8 @@
 # BundleFusion
 
-![BundleFusion](img/teaser.jpg)
+![BundleFusion](img/teaser.jpg
+
+支持 realsense2相机
 
 You are free to use this code with proper attribution in non-commercial applications (Please see [License.txt](License.txt)).
 
@@ -11,9 +13,8 @@ The code was developed under VS2013, and tested with a Structure Sensor.
 
 Requirements:
 - DirectX SDK June 2010
-- NVIDIA CUDA 7.0
-- our research library mLib, a git submodule in external/mLib
-- mLib external libraries can be downloaded [here](http://kaldir.vc.in.tum.de/mLib/mLibExternal.zip)
+- NVIDIA CUDA 9.0
+- VS2015
 
 Optional:
 - Kinect SDK (2.0 and above)
